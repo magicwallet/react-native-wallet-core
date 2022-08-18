@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "12.4" }
-  s.source       = { :git => "https://google.com.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/magicwallet/react-native-wallet-core", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 

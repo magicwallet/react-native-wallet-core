@@ -1,7 +1,7 @@
 {
   "name": "@magicwallet/react-native-wallet-core",
-  "version": "0.0.12",
-  "description": "test",
+  "version": "0.0.1",
+  "description": "Wallet Core for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -25,6 +25,7 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "build": "bob build",
     "prepare": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
@@ -33,15 +34,20 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "wallet-core",
+    "wallet-core",
+    "crypto",
+    "ethereum",
+    "bitcoin"
   ],
   "repository": "https://google.com",
-  "author": "endlessl8p <104884878+endlessl8p@users.noreply.github.com> (https://google.com)",
+  "author": "endlessl8p <104884878+endlessl8p@users.noreply.github.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://google.com/issues"
+    "url": "https://github.com/magicwallet/react-native-wallet-core/issues"
   },
-  "homepage": "https://google.com#readme",
+  "homepage": "https://github.com/magicwallet/react-native-wallet-core#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
