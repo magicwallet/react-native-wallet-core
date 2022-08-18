@@ -18,3 +18,10 @@ const ReactNativeWalletCore = NativeModules.ReactNativeWalletCore  ? NativeModul
 export function multiply(a: number, b: number): Promise<number> {
   return ReactNativeWalletCore.multiply(a, b);
 }
+
+export function createWallet(
+    strength: number,
+    passphrase: string
+): Promise<string> {
+    return ReactNativeWalletCore.createWallet(strength, passphrase);
+}
