@@ -1,6 +1,6 @@
 {
   "name": "@magicwallet/react-native-wallet-core",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Wallet Core for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -10,6 +10,8 @@
   "private": false,
   "files": [
     "lib",
+    "android",
+    "ios",
     "ReactNativeWalletCore.podspec"
   ],
   "scripts": {
@@ -32,7 +34,7 @@
     "ethereum",
     "bitcoin"
   ],
-  "repository": "https://google.com",
+  "repository": "https://github.com/magicwallet/react-native-wallet-core",
   "author": "endlessl8p <104884878+endlessl8p@users.noreply.github.com>",
   "license": "MIT",
   "bugs": {
