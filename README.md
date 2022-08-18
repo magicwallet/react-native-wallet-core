@@ -1,19 +1,19 @@
-# react-native-react-native-wallet-core
-a
+# @magicwallet/react-native-wallet-core
+
 ## Installation
 
 ```sh
-npm install react-native-react-native-wallet-core
+yarn add @magicwallet/react-native-wallet-core
 ```
 
 ## Usage
 
-```js
-import { multiply } from "react-native-react-native-wallet-core";
+```typescript
+import { createWallet } from "@magicwallet/react-native-wallet-core";
 
 // ...
 
-const result = await multiply(3, 7);
+const mnemonic = await createWallet(128, '');
 ```
 
 ## Contributing
@@ -23,7 +23,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
