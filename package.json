@@ -9,7 +9,8 @@
   "source": "src/index",
   "private": false,
   "files": [
-    "lib"
+    "lib",
+    "ReactNativeWalletCore.podspec"
   ],
   "scripts": {
     "test": "jest",
@@ -39,6 +40,7 @@
   },
   "homepage": "https://github.com/magicwallet/react-native-wallet-core#readme",
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
