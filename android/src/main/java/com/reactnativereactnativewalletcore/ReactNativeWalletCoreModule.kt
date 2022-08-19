@@ -19,6 +19,6 @@ class ReactNativeWalletCoreModule(reactContext: ReactApplicationContext) : React
 
     @ReactMethod
     fun createWallet(strength: Int, passphrase: String, promise: Promise) {
-        promise.resolve('test')
+        promise.resolve("test")
     }
 }
