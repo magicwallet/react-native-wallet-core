@@ -1,4 +1,4 @@
-package com.example.reactnativereactnativewalletcore.newarchitecture.modules;
+package org.magicwallet.reactnativereactnativewalletcore.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

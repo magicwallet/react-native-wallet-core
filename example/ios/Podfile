@@ -1,5 +1,5 @@
-require_relative '../../../../../node_modules/react-native/scripts/react_native_pods'
-require_relative '../../../../../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require_relative '../../node_modules/react-native/scripts/react_native_pods'
+require_relative '../../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 platform :ios, '12.4'
 install! 'cocoapods', :deterministic_uuids => false
@@ -21,7 +21,7 @@ target 'ReactNativeWalletCoreExample' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  pod 'ReactNativeWalletCore', :path => '../../'
+  pod 'ReactNativeWalletCore', :path => '../..'
 
   # Enables Flipper.
   #

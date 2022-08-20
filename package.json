@@ -22,6 +22,8 @@
     "!**/__mocks__"
   ],
   "scripts": {
+    "ios": "react-native run-ios --project-path \"./example/ios\"",
+    "android": "react-native run-android --root example",
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
