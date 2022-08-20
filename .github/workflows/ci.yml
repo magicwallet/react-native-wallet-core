@@ -68,8 +68,8 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
         run: yarn
-      - name: Build Android Example App and Library
-        run: cd example/android && ./gradlew clean assembleDebug
+#      - name: Build Android Example App and Library
+#        run: cd example/android && ./gradlew clean assembleDebug
   ios:
     runs-on: macos-latest
     strategy:
@@ -89,5 +89,5 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
         run: yarn
-      - name: Build example app
-        run: yarn ios
+#      - name: Build example app
+#        run: yarn ios
