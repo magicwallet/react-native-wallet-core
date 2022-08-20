@@ -45,7 +45,7 @@ jobs:
 #       - name: TypeScript type check
 #         run: yarn type-check
   android:
-    runs-on: ubuntu-18.04
+    runs-on: macos-latest
     strategy:
       matrix:
         node-version: [14]
@@ -54,6 +54,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '11'
       - name: Get yarn cache
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
