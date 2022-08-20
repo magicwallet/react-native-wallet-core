@@ -1,6 +1,6 @@
 {
   "name": "@magicwallet/react-native-wallet-core",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Wallet Core for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
