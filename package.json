@@ -13,7 +13,10 @@
     "lib",
     "android",
     "ios",
-    "ReactNativeWalletCore.podspec"
+    "ReactNativeWalletCore.podspec",
+    "!local.properties",
+    "!.idea",
+    "!.gradle"
   ],
   "scripts": {
     "test": "jest",
