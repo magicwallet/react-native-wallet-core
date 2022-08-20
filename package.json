@@ -22,14 +22,15 @@
     "!**/__mocks__"
   ],
   "scripts": {
+    "ios": "react-native run-ios --project-path \"./example/ios\"",
+    "android": "react-native run-android --root example",
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "build": "bob build",
     "prepare": "bob build",
     "release": "release-it",
-    "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn && yarn example pods"
+    "bootstrap": "yarn --cwd example && yarn && yarn --cwd example pods"
   },
   "keywords": [
     "react-native",
