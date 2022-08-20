@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-react-native-wallet-core';
+import { multiply } from '../../lib/typescript';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
