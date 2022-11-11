@@ -25,3 +25,9 @@ export function createWallet(
 ): Promise<string> {
     return ReactNativeWalletCore.createWallet(strength, passphrase);
 }
+
+export function sha512(
+  string: string
+): Promise<string> {
+  return ReactNativeWalletCore.sha512(string);
+}

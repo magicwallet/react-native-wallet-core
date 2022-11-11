@@ -16,6 +16,6 @@ class ReactNativeWalletCore: NSObject {
     
     @objc(sha512:withResolver:withRejecter:)
     func sha512(string: String, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-        resolve(Hash.sha512(data: string.data(using: .utf8)!))
+        resolve(Hash.sha512(data: string.data(using: .utf8)!).hexString)
     }
 }
