@@ -27,7 +27,7 @@ export function createWallet(
 }
 
 export function sha512(
-  string: string
+  value: string
 ): Promise<string> {
-  return ReactNativeWalletCore.sha512(string);
+  return ReactNativeWalletCore.sha512(value);
 }
