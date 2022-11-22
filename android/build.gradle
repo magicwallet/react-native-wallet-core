@@ -140,7 +140,7 @@ dependencies {
     //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation 'com.trustwallet:wallet-core:2.9.8'
+  implementation 'com.trustwallet:wallet-core:3.0.9'
 // From node_modules
 }
 
