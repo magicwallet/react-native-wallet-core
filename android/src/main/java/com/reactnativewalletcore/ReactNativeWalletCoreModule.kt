@@ -1,10 +1,11 @@
-package com.reactnativereactnativewalletcore
+package com.reactnativewalletcore
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
 import wallet.core.java.AnySigner
 import wallet.core.jni.HDWallet
+import wallet.core.jni.CoinType
 
 class ReactNativeWalletCoreModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
@@ -16,16 +17,19 @@ class ReactNativeWalletCoreModule(reactContext: ReactApplicationContext) : React
         return "ReactNativeWalletCore"
     }
 
-    // Example method
-    // See https://reactnative.dev/docs/native-modules-android
     @ReactMethod
-    fun multiply(a: Int, b: Int, promise: Promise) {
-        promise.resolve(a * b)
+    fun validateAddress(address: String, coin: Int, promise: Promise) {
+        val coinType = CoinType.createFromValue(coin)
+        if (coinType == null) {
+            promise.reject("Invalid CoinType", String.format("coin %d is not a valid CoinType", coin))
+            return
+        }
+        promise.resolve(coinType.validate(address))
     }
 
     @ReactMethod
     fun createWallet(strength: Int, passphrase: String, promise: Promise) {
-        val wallet = HDWallet(128, "");
+        val wallet = HDWallet(strength, passphrase);
         promise.resolve(wallet.mnemonic())
     }
 }

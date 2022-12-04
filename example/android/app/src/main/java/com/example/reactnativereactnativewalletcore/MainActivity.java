@@ -1,4 +1,4 @@
-package org.magicwallet.reactnativereactnativewalletcore;
+package org.magicwallet.reactnativewalletcore;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

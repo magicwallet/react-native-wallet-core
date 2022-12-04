@@ -51,9 +51,9 @@ Remember to add tests for your change if possible. Run the unit tests by:
 ```sh
 yarn test
 ```
-To edit the Objective-C files, open `example/ios/ReactNativeWalletCoreExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-react-native-wallet-core`.
+To edit the Objective-C files, open `example/ios/ReactNativeWalletCoreExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > ReactNativeWalletCore`.
 
-To edit the Kotlin files, open `example/android` in Android studio and find the source files at `reactnativereactnativewalletcore` under `Android`.
+To edit the Kotlin files, open `example/android` in Android studio and find the source files at `com.reactnativewalletcore` under `android`.
 ### Commit message convention
 
 We follow the [conventional commits specification](https://www.conventionalcommits.org/en) for our commit messages:

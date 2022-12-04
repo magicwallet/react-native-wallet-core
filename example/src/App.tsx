@@ -1,18 +1,20 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from '../../lib/typescript';
+import { validateAddress, createWallet } from '../../lib/typescript';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const testAddres = '0x03671B7c11cb749DE612bB460cEF8bc3f6E6Db06';
+  const [result, setResult] = React.useState<boolean | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    validateAddress(testAddres, 60).then(setResult);
+    createWallet(256, "").then(console.log);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>{testAddres} is a valid Ethereum address: {result ? "true": "false"}</Text>
     </View>
   );
 }
@@ -22,6 +24,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 10
   },
   box: {
     width: 60,
