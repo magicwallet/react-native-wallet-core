@@ -2,6 +2,7 @@ require "json"
 
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32'
+wc_verion = '3.0.9'
 
 Pod::Spec.new do |s|
   s.name         = "ReactNativeWalletCore"
@@ -17,7 +18,7 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
   s.dependency "React-Core"
-  s.dependency "TrustWalletCore", "3.0.9"
+  s.dependency "TrustWalletCore", "#{wc_verion}"
 
   # Don't install the dependencies when we run `pod install` in the old architecture.
   if ENV['RCT_NEW_ARCH_ENABLED'] == '1' then
@@ -27,7 +28,7 @@ Pod::Spec.new do |s|
         "CLANG_CXX_LANGUAGE_STANDARD" => "c++17"
     }
 
-    s.dependency "TrustWalletCore", "2.9.8"
+    s.dependency "TrustWalletCore", "#{wc_verion}"
 
     s.dependency "React-Codegen"
     s.dependency "RCT-Folly"

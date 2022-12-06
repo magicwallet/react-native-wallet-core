@@ -2,16 +2,15 @@
 
 @interface RCT_EXTERN_MODULE(ReactNativeWalletCore, NSObject)
 
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
+RCT_EXTERN_METHOD(validateAddress:(NSString)address withCoin:(nonnull NSNumber)coin
+                  withResolver:(RCTPromiseResolveBlock)resolve
+                  withRejecter:(RCTPromiseRejectBlock)reject)
+
+RCT_EXTERN_METHOD(createWallet:(nonnull NSNumber)strength withPassphrase:(NSString)passphrase
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(createWallet:(float)strength withPassphrase:(float)passphrase
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
-
-+ (BOOL)requiresMainQueueSetup
-{
++ (BOOL)requiresMainQueueSetup {
   return NO;
 }
 

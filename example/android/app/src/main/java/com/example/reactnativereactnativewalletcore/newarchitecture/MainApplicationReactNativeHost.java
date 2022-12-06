@@ -1,4 +1,4 @@
-package org.magicwallet.reactnativereactnativewalletcore.newarchitecture;
+package org.magicwallet.reactnativewalletcore.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import org.magicwallet.reactnativereactnativewalletcore.BuildConfig;
-import org.magicwallet.reactnativereactnativewalletcore.newarchitecture.components.MainComponentsRegistry;
-import org.magicwallet.reactnativereactnativewalletcore.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import org.magicwallet.reactnativewalletcore.BuildConfig;
+import org.magicwallet.reactnativewalletcore.newarchitecture.components.MainComponentsRegistry;
+import org.magicwallet.reactnativewalletcore.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

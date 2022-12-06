@@ -1,6 +1,6 @@
 {
   "name": "react-native-wallet-core-example",
-  "description": "Example app for react-native-react-native-wallet-core",
+  "description": "Example app for react-native-wallet-core",
   "version": "0.0.1",
   "private": true,
   "scripts": {

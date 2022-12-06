@@ -1,4 +1,4 @@
-package org.magicwallet.reactnativereactnativewalletcore.newarchitecture.components;
+package org.magicwallet.reactnativewalletcore.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;
