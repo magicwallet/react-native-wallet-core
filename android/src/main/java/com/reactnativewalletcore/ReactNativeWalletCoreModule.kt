@@ -52,19 +52,4 @@ class ReactNativeWalletCoreModule(reactContext: ReactApplicationContext) : React
     fun sha512(string: String, promise: Promise) {
         promise.resolve(Hash.sha512(string.toData()).toHex())
     }
-
-    private fun String.toData(): ByteArray {
-        if (startsWith("0x")) {
-            check(length % 2 == 0)
-            return drop(2)
-                .chunked(2)
-                .map { it.toInt(16).toByte() }
-                .toByteArray()
-        }
-        return toByteArray()
-    }
-
-    private fun ByteArray.toHex(): String {
-        return joinToString("") { "%02x".format(it) }
-    }
 }
