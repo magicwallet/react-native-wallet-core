@@ -1,0 +1,19 @@
+name: release
+on: [create]
+jobs:
+  release:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+          registry-url: "https://registry.npmjs.org"
+      - name: yarn install
+        run: yarn install
+      - name: yarn build
+        run: yarn build
+      - name: yarn release
+        run: yarn release
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
