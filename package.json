@@ -27,6 +27,7 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint:swift": "swiftlint ios/*.swift --fix",
     "build": "bob build && cp src/*.ts lib/typescript",
     "prepare": "bob build && cp src/*.ts lib/typescript",
     "release": "release-it",
