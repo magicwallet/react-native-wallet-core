@@ -27,8 +27,8 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "build": "bob build && cp src/index.tsx lib/typescript",
-    "prepare": "bob build && cp src/index.tsx lib/typescript",
+    "build": "bob build && cp src/*.ts lib/typescript",
+    "prepare": "bob build && cp src/*.ts lib/typescript",
     "release": "release-it",
     "bootstrap": "yarn --cwd example && yarn && yarn --cwd example pods"
   },

@@ -1,7 +1,9 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { AnyAddress, HDWallet, Hash } from '../../lib/typescript';
+import { HDWallet } from '../../lib/typescript/hdwallet';
+import { AnyAddress } from '../../lib/typescript/address';
+import { Hash } from '../../lib/typescript/hash'
 
 export default function App() {
   const testAddres = '0x03671B7c11cb749DE612bB460cEF8bc3f6E6Db06';
