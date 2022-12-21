@@ -27,8 +27,9 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "build": "bob build",
-    "prepare": "bob build",
+    "lint:swift": "swiftlint ios/*.swift --fix",
+    "build": "bob build && cp src/*.ts lib/typescript",
+    "prepare": "bob build && cp src/*.ts lib/typescript",
     "release": "release-it",
     "bootstrap": "yarn --cwd example && yarn && yarn --cwd example pods"
   },

@@ -3,9 +3,9 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
-import wallet.core.java.AnySigner
 import wallet.core.jni.HDWallet
 import wallet.core.jni.CoinType
+import wallet.core.jni.Hash
 
 class ReactNativeWalletCoreModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
@@ -31,5 +31,25 @@ class ReactNativeWalletCoreModule(reactContext: ReactApplicationContext) : React
     fun createWallet(strength: Int, passphrase: String, promise: Promise) {
         val wallet = HDWallet(strength, passphrase);
         promise.resolve(wallet.mnemonic())
+    }
+
+    @ReactMethod
+    fun sha256(string: String, promise: Promise) {
+        promise.resolve(Hash.sha256(string.toData()).toHex())
+    }
+
+    @ReactMethod
+    fun keccak256(string: String, promise: Promise) {
+        promise.resolve(Hash.keccak256(string.toData()).toHex())
+    }
+
+    @ReactMethod
+    fun sha3_256(string: String, promise: Promise) {
+        promise.resolve(Hash.sha3256(string.toData()).toHex())
+    }
+
+    @ReactMethod
+    fun sha512(string: String, promise: Promise) {
+        promise.resolve(Hash.sha512(string.toData()).toHex())
     }
 }

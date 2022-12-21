@@ -15,19 +15,4 @@ const ReactNativeWalletCore = NativeModules.ReactNativeWalletCore ? NativeModule
   }
 );
 
-export function validateAddress(address: string, coin: number): Promise<boolean> {
-  return ReactNativeWalletCore.validateAddress(address, coin);
-}
-
-export function createWallet(
-  strength: number,
-  passphrase: string
-): Promise<string> {
-  return ReactNativeWalletCore.createWallet(strength, passphrase);
-}
-
-export function sha512(
-  value: string
-): Promise<string> {
-  return ReactNativeWalletCore.sha512(value);
-}
+export { ReactNativeWalletCore };
